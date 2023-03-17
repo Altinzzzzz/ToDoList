@@ -1,0 +1,107 @@
+:root{
+    --main-bg-color: #2C3333;
+    --main-btn-bg-color: #413543; 
+    --main-btn-text-color: #0E8388;
+    --main-aside-project-text-color: #0E8388;
+    --main-aside-task-text-color: #f7c886;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--main-bg-color);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    border: 5px solid blue;
+    width: 70%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 300px 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+main > .header{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+}
+
+.header > *{
+    margin: 0 2%;
+}
+
+.header > h1{
+    color: var(--main-btn-text-color);
+    font-size: 1.7em;
+    width: 200px;
+    padding: 20px;
+    margin-left: 5%;
+}
+
+.header > div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.header > div > button{
+    width: 150px;
+    padding: 12px;
+    font-size: 20px;
+    background-color: var(--main-bg-color);
+    color: var(--main-btn-text-color);
+    border-color: var(--main-btn-text-color);
+}
+
+
+main > .aside{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border: 1px solid yellow;
+    width: 80%;
+    margin: 10%;
+    /* overflow-y: scroll; */
+}
+
+.aside > .projects{
+    color: var(--main-aside-project-text-color);
+    font-size: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.aside > .projects > *{
+    font-size: 23px;
+    margin: 10px 0;
+    margin-left: 20px;
+    color: var(--main-aside-task-text-color);
+    display: block;
+}
+
+.aside > .projects > *:hover{
+    font-weight: bold;
+}
+
+
+
+
+
+main > .content{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+main > div {
+    border: 1px solid red;
+}
