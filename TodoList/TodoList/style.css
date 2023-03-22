@@ -1,0 +1,194 @@
+:root{
+    --main-bg-color: black;
+    --main-btn-bg-color: #b5b3b6; 
+    --main-btn-text-color: white;
+    --main-aside-project-text-color: #2e99b0;
+
+    --bgColor1: #15202b;
+    --bgColor2: #192734;
+    --bgColor3: #22303c;
+    --bgColorPopUp: #273746;
+    --textColor: #eaebec;
+    --accent: #2abd67;
+    --accentDark:#1f8d4d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--bgColor3);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: var(--bgColor3);
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px 5fr;
+}
+
+main > .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header > h1{
+    color: var(--main-btn-text-color);
+    font-size: 1.9em;
+    width: 200px;
+}
+
+main > .second{
+    display: flex;
+}
+
+main > .second > *{
+    width: 100%;
+}
+
+main > .second > .aside{
+    width: 25%;
+    background-color: var(--bgColor1);
+}
+
+main .aside > .sidebar{
+    width: 80%;
+    height: 95%;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .sidebar > *{
+    list-style-type: none;
+    font-size: 30px;
+    width: 90%;
+    padding: 15px;
+
+    color: var(--textColor);
+    border-bottom: 1px solid var(--textColor);
+    margin: 0 auto 25px auto;
+}
+
+main .sidebar > .projects{
+    border: none;
+    padding-top: 0;
+}
+
+#Project0{
+    margin-top: 35px;
+}
+
+main li{
+    width: 90%;
+    padding: 5px;
+    padding-left: 20px;
+    margin-left: 25px;
+    font-size: 1.6rem;
+    color: var(--textColor);
+    cursor: pointer;
+}
+
+main li:hover{
+    background-color: var(--accentDark);
+}
+
+.active{
+    background-color: var(--accent);
+}
+
+.mainContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second > .mainContent > .mainBox{
+    width: 90%;
+    height: 90%;
+}
+
+.mainContent > .mainBox > .projectNameHeader{
+    font-size: 2.4em;
+    color: var(--textColor);
+    background-color: var(--accentDark);
+    height: 15%;
+    width: 90%;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.second > .mainContent > .mainBox > .taskContainer{
+    width: 80%;
+    height: 90%;
+    height: max-content;
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.mainContent > .mainBox > .taskContainer > .task{
+    height: auto;
+    width: 100%;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bgColor3);
+}
+
+.task:hover{
+    background-color: var(--bgColor2);
+    cursor: pointer;
+}
+
+.taskContainer > .task > *{
+    gap: 20px;
+    display: flex;
+    align-items: baseline;
+    height: 50px;
+}
+
+.taskContainer > .task > div > *{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--textColor);
+    height: 100%;
+}
+
+.taskContainer > .task > div > button{
+    width: 60px;
+    border-radius: 0;
+}
+
+.noTask{
+    color: white;
+    font-size: 1.7rem;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.btn-success{
+    margin-top: 20px;
+    width: 10%;
+    height: 50px;
+    margin: 0 auto;
+}
