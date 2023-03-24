@@ -1,9 +1,16 @@
 :root{
-    --main-bg-color: #2C3333;
-    --main-btn-bg-color: #413543; 
-    --main-btn-text-color: #0E8388;
-    --main-aside-project-text-color: #0E8388;
-    --main-aside-task-text-color: #f7c886;
+    --main-bg-color: black;
+    --main-btn-bg-color: #b5b3b6; 
+    --main-btn-text-color: white;
+    --main-aside-project-text-color: #2e99b0;
+
+    --bgColor1: #15202b;
+    --bgColor2: #192734;
+    --bgColor3: #22303c;
+    --bgColorPopUp: #273746;
+    --textColor: #eaebec;
+    --accent: #2abd67;
+    --accentDark:#1f8d4d;
 }
 
 *{
@@ -12,96 +19,218 @@
 }
 
 body{
-    background-color: var(--main-bg-color);
-    height: 100vh;
-    width: 100vw;
+    background-color: var(--bgColor3);
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 main{
-    border: 5px solid blue;
-    width: 70%;
-    height: 60%;
+    background-color: var(--bgColor3);
+    width: 100%;
+    height: 100vh;
     display: grid;
-    grid-template-columns: 300px 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 100px 5fr;
 }
 
 main > .header{
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
     display: flex;
     align-items: center;
-}
-
-.header > *{
-    margin: 0 2%;
+    justify-content: center;
 }
 
 .header > h1{
     color: var(--main-btn-text-color);
-    font-size: 1.7em;
+    font-size: 1.9em;
     width: 200px;
-    padding: 20px;
-    margin-left: 5%;
 }
 
-.header > div{
-    width: 100%;
+main > .second{
     display: flex;
-    justify-content: flex-end;
-    gap: 20px;
 }
 
-.header > div > button{
-    width: 150px;
-    padding: 12px;
-    font-size: 20px;
-    background-color: var(--main-bg-color);
-    color: var(--main-btn-text-color);
-    border-color: var(--main-btn-text-color);
+main > .second > *{
+    width: 100%;
 }
 
+main > .second > .aside{
+    width: 25%;
+    background-color: var(--bgColor1);
+}
 
-main > .aside{
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    border: 1px solid yellow;
+main .aside > .sidebar{
     width: 80%;
-    margin: 10%;
-    /* overflow-y: scroll; */
+    height: 95%;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
 }
 
-.aside > .projects{
-    color: var(--main-aside-project-text-color);
-    font-size: 30px;
-    margin-bottom: 15px;
+main .sidebar > *{
+    list-style-type: none;
+    font-size: 1.6em;
+    width: 90%;
+    padding: 15px;
+
+    color: var(--textColor);
+    border-bottom: 1px solid var(--textColor);
+    margin: 0 auto 25px auto;
+}
+
+main .sidebar > .projects{
+    border: none;
+    padding-top: 0;
+}
+
+#Project0{
+    margin-top: 35px;
+}
+
+main li{
+    width: 100%;
+    padding: 5px;
+    padding-left: 20px;
+    margin-left: 25px;
+    font-size: 1.4rem;
+    color: var(--textColor);
     cursor: pointer;
 }
 
-.aside > .projects > *{
-    font-size: 23px;
-    margin: 10px 0;
-    margin-left: 20px;
-    color: var(--main-aside-task-text-color);
-    display: block;
+main li:hover{
+    background-color: var(--accentDark);
 }
 
-.aside > .projects > *:hover{
+.active{
+    background-color: var(--accent);
+}
+
+.mainContent{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.second > .mainContent > .mainBox{
+    width: 90%;
+    margin-top: 2%;
+}
+
+.mainContent > .mainBox > .projectNameHeader{
+    font-size: 2.4em;
+    color: var(--textColor);
+    background-color: var(--accentDark);
+    height: 100px;
+    width: 90%;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.second > .mainContent > .mainBox > .taskContainer{
+    width: 80%;
+    height: 90%;
+    height: max-content;
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.mainContent > .mainBox > .taskContainer > .task{
+    height: auto;
+    width: 100%;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bgColor3);
+}
+
+.task:hover{
+    background-color: var(--bgColor2);
+    cursor: pointer;
+}
+
+.taskContainer > .task > *{
+    gap: 20px;
+    display: flex;
+    align-items: baseline;
+    height: 50px;
+}
+
+.taskContainer > .task > div > *{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--textColor);
+    height: 100%;
+}
+
+.taskContainer > .task > div > button{
+    width: 60px;
+    border-radius: 0;
+}
+
+.noTask{
+    color: white;
+    font-size: 1.7rem;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#taskButtonBox{
+    display: flex;
+    justify-content: center;
+}
+
+.taskBtn{
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#taskForm{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--bgColor2);
+}
+
+#taskForm > label{
+    color: var(--textColor);
+    font-size: 1.4em;
     font-weight: bold;
 }
 
-
-
-
-
-main > .content{
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+#taskForm > *{
+    padding: 10px 0;
 }
 
-main > div {
-    border: 1px solid red;
+#taskForm > :is(textarea, input){
+    font-size: 1.1em;
+    padding-left: 10px;
+    color: var(--bgColor1);
+}
+
+#taskForm > div{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#taskForm > div > *{
+    padding: 14px;
+    width: 120px;
 }
