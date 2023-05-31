@@ -166,6 +166,6 @@ function clearDisplay(){
     mainDisplay.textContent = '';
 }
 
-createProject('altini');
+createProject('FirstProject');
 document.querySelector('#Project0').style.marginTop = '35px';
 //allTasks.click();
